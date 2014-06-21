@@ -9,6 +9,8 @@ namespace CoffeeHit.iOS.Views
 {
     public partial class MainViewController : UIViewController
     {
+        private CoffeeCounter _cupCounter;
+
         static bool UserInterfaceIdiomIsPhone
         {
             get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
@@ -17,6 +19,7 @@ namespace CoffeeHit.iOS.Views
         public MainViewController(IntPtr handle)
             : base(handle)
         {
+            _cupCounter = new CoffeeCounter();
         }
 
         public override void DidReceiveMemoryWarning()
@@ -33,7 +36,13 @@ namespace CoffeeHit.iOS.Views
         {
             base.ViewDidLoad();
 
-            // Perform any additional setup after loading the view, typically from a nib.
+            CupButton.TouchUpInside += CupButtonPressed;
+        }
+
+        private void CupButtonPressed(object sender, EventArgs e)
+        {
+            _cupCounter.CoffeeDrank();
+            OutputLabel.Text = _cupCounter.DisplayMessage();
         }
 
         public override void ViewWillAppear(bool animated)

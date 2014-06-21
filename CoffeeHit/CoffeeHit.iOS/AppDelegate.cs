@@ -31,7 +31,9 @@ namespace CoffeeHit.iOS
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            window.RootViewController = App.GetMainPage().CreateViewController();
+            var storyboard = UIStoryboard.FromName("MainViewController_iPad", null);
+            var navigationController = new UINavigationController((UIViewController)storyboard.InstantiateInitialViewController());
+            window.RootViewController = navigationController;
 
             window.MakeKeyAndVisible();
 

@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeHit.Android", "Coffee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeHit.WinPhone", "CoffeeHit\CoffeeHit.WinPhone\CoffeeHit.WinPhone.csproj", "{20C5CA85-5851-42A5-9832-6A97E49BA120}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CFD28FC0-A2C2-4BFA-9F43-F4647E4C9C3E}"
+	ProjectSection(SolutionItems) = preProject
+		CoffeeHit\coffeecup.jpg = CoffeeHit\coffeecup.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
